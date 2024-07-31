@@ -51,12 +51,13 @@ class SignUp extends Component {
       this.setState({incompleteDetails: false})
 
       const userDetails = {
-        fullName: {fullName},
-        emailAddress: {emailAddress},
-        password: {password},
-        company: {company},
+        fullName,
+        emailAddress,
+        password,
+        company,
       }
-      Cookies.set('userDetails', userDetails, {
+      const newUserDetails = JSON.stringify(userDetails)
+      Cookies.set('userDetails', newUserDetails, {
         expires: 30,
         path: '/',
       })
@@ -73,8 +74,6 @@ class SignUp extends Component {
       terms,
       incompleteDetails,
     } = this.state
-
-    console.log(fullName, emailAddress, password, company, terms)
 
     return (
       <div className="sign-up-parent-container">
