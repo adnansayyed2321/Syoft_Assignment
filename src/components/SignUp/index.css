@@ -63,6 +63,7 @@
     padding: 30px;
     width: 35%;
     color: #1e293b;
+    height: 100vh;
   }
   .logo-styling {
     height: 70px;
@@ -232,7 +233,7 @@
     font-size: 14px;
   }
   .button-styling {
-    padding: 7px 12px;
+    padding: 8px 12px;
     display: flex;
     justify-content: center;
     font-weight: 600;
