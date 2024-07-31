@@ -60,7 +60,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding: 30px;
+    padding: 0px 30px;
     width: 35%;
     color: #1e293b;
     height: 100vh;
@@ -130,6 +130,7 @@
     padding: 30px;
     width: 100%;
     color: #1e293b;
+    height: 100vh;
   }
 
   .logo-styling {
@@ -200,10 +201,10 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
-    padding: 20px 15px;
     width: 100%;
     color: #1e293b;
+    padding: 40px 15px;
+    height: 100%;
   }
 
   .logo-styling {
@@ -233,7 +234,7 @@
     font-size: 14px;
   }
   .button-styling {
-    padding: 8px 12px;
+    padding: 9px 12px;
     display: flex;
     justify-content: center;
     font-weight: 600;

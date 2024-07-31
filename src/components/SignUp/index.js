@@ -75,8 +75,9 @@ class SignUp extends Component {
     } = this.state
 
     const userDetails = Cookies.get('userDetails')
+    const isLoggedIn = Cookies.get('isLoggedIn')
 
-    if (userDetails !== undefined) {
+    if (userDetails !== undefined && isLoggedIn !== undefined) {
       return <Redirect to="/" />
     }
 
@@ -180,7 +181,7 @@ class SignUp extends Component {
                 />
                 I agree to the{' '}
                 <span style={{color: 'blue'}}>Terms of Service</span> and{' '}
-                <span style={{color: 'blue'}}>Privacy Policy</span>
+                <span style={{color: 'blue'}}>Privacy Policy</span> *
               </label>
             </div>
             <button className="button-styling" type="submit">
