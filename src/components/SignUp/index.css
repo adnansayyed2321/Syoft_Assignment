@@ -1,0 +1,255 @@
+.form-styling {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+  .sign-up-parent-container {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+  }
+  .heading-greetings-container {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://res.cloudinary.com/adnansayyed2321/image/upload/v1722422368/abstract-sale-busioness-background-banner-design-multipurpose_bww7yp.jpg');
+    background-size: cover;
+    height: 100vh;
+    padding: 0px 20px;
+  }
+  .heading-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #6d7e91;
+    row-gap: 30px;
+    max-width: 450px;
+  }
+  .main-heading-sign-up {
+    font-size: 52px;
+    color: #dbe6f1;
+    line-height: 50px;
+  }
+  .avatar {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+  }
+  .avatar-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 77px;
+  }
+  .abs-ava {
+    position: absolute;
+    left: 35px;
+  }
+  .abs-ava2 {
+    position: absolute;
+    left: 70px;
+  }
+  .registration-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 30px;
+    width: 35%;
+    color: #1e293b;
+  }
+  .logo-styling {
+    height: 70px;
+    width: 70px;
+  }
+  .sign-up-heading {
+    padding: 20px 0px;
+    font-weight: 500;
+  }
+  .label-input-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3px;
+    font-weight: 500;
+  }
+  .input-styling {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #979393;
+    border-radius: 6px;
+  }
+  .terms-label {
+    font-weight: 500;
+  }
+  .button-styling {
+    padding: 10px 12px;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    border-radius: 20px;
+    background-color: #4f46e5;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .error-styles {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(210, 31, 31);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .sign-up-parent-container {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+  }
+  .heading-greetings-container {
+    display: none;
+  }
+  .logo-styling {
+    height: 50px;
+    width: 50px;
+  }
+  .registration-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 30px;
+    width: 100%;
+    color: #1e293b;
+  }
+
+  .logo-styling {
+    height: 70px;
+    width: 70px;
+  }
+  .sign-up-heading {
+    padding: 20px 0px;
+    font-weight: 500;
+
+    font-size: 15px;
+  }
+  .label-input-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3px;
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .input-styling {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #979393;
+    border-radius: 6px;
+    font-size: 15px;
+  }
+  .terms-label {
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .button-styling {
+    padding: 8px 12px;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    border-radius: 20px;
+    background-color: #4f46e5;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+
+    margin-top: 15px;
+  }
+  .error-styles {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    font-weight: 500;
+    font-size: 15px;
+    color: rgb(210, 31, 31);
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .sign-up-parent-container {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+  }
+  .heading-greetings-container {
+    display: none;
+  }
+  .logo-styling {
+    height: 40px;
+    width: 40px;
+  }
+  .registration-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px 15px;
+    width: 100%;
+    color: #1e293b;
+  }
+
+  .logo-styling {
+    height: 70px;
+    width: 70px;
+  }
+  .sign-up-heading {
+    padding: 20px 0px;
+    font-weight: 500;
+  }
+  .label-input-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3px;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .input-styling {
+    width: 100%;
+    padding: 7px 12px;
+    border: 1px solid #979393;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .terms-label {
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .button-styling {
+    padding: 7px 12px;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    border-radius: 20px;
+    background-color: #4f46e5;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+
+    margin-top: 10px;
+  }
+  .error-styles {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgb(210, 31, 31);
+  }
+}

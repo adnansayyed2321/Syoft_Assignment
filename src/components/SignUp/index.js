@@ -82,64 +82,114 @@ class SignUp extends Component {
 
     return (
       <div className="sign-up-parent-container">
-        <div className="sign-up-main-container">
-          <div className="heading-greetings-container">
-            <h1>Welcome to our community</h1>
+        <div className="heading-greetings-container">
+          <div className="heading-content-container">
+            <h1 className="main-heading-sign-up">
+              Welcome to <br />
+              our community
+            </h1>
+            <p>
+              Fuse helps developers to build organized and weil coded dashboards
+              full of beautiful and rich modules. Join us and start building
+              your application today
+            </p>
+            <div className="avatar-container">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmCicxernIb5W2jIRbjKwiMOVIit_7XJtczA&s"
+                alt="person"
+                className="avatar"
+              />
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0rfm7ulLh-hULWlR8NBtrIwRCCWql8VQ9zw&s"
+                alt="person"
+                className="avatar abs-ava"
+              />
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlib_T_3DSQwXS3xg5mYxEriShsndkhll8-w&s"
+                alt="person"
+                className="avatar abs-ava2"
+              />
+              <p>More than 17k people joined us, its your turn</p>
+            </div>
           </div>
-          <div className="registration-main-container">
+        </div>
+
+        <div className="registration-main-container">
+          <img
+            src="https://fusetheme.com/static/assets/images/fuse.svg"
+            alt="logo"
+            className="logo-styling"
+          />
+          <div className="sign-up-heading">
             <h1>Sign up</h1>
             <p>
-              Already have an account ? <Link to="/login">Sign in</Link>
+              Already have an account ?{' '}
+              <Link to="/login" style={{color: 'blue', textDecoration: 'none'}}>
+                Sign in
+              </Link>
             </p>
-            <form onSubmit={this.onRegistration}>
-              <div>
-                <label htmlFor="fullName">Name *</label>
-                <input
-                  id="fullName"
-                  onChange={this.onChangeFullName}
-                  value={fullName}
-                />
-              </div>
-              <div>
-                <label htmlFor="emailAddress">Email Address *</label>
-                <input
-                  id="emailAddress"
-                  onChange={this.onChangeEmailAddress}
-                  value={emailAddress}
-                />
-              </div>
-              <div>
-                <label htmlFor="password">Password *</label>
-                <input
-                  id="password"
-                  onChange={this.onChangePassword}
-                  value={password}
-                />
-              </div>
-              <div>
-                <label htmlFor="company">Company *</label>
-                <input
-                  id="company"
-                  onChange={this.onChangeCompany}
-                  value={company}
-                />
-              </div>
-              <div>
-                <label id="privacyPolicy">
-                  <input
-                    type="checkbox"
-                    htmlFor="privacyPolicy"
-                    onChange={this.onChangeTerms}
-                    value={terms}
-                  />
-                  I agree to the <span>Terms of Service</span> and{' '}
-                  <span>Privacy Policy</span>
-                </label>
-              </div>
-              <button type="submit">Create your free account</button>
-            </form>
-            {incompleteDetails && <p>Please Enter All * Details</p>}
           </div>
+
+          <form onSubmit={this.onRegistration} className="form-styling">
+            <div className="label-input-container">
+              <label htmlFor="fullName">Name *</label>
+              <input
+                id="fullName"
+                onChange={this.onChangeFullName}
+                value={fullName}
+                className="input-styling"
+              />
+            </div>
+            <div className="label-input-container">
+              <label htmlFor="emailAddress">Email Address *</label>
+              <input
+                id="emailAddress"
+                onChange={this.onChangeEmailAddress}
+                value={emailAddress}
+                className="input-styling"
+                type="email"
+              />
+            </div>
+            <div className="label-input-container">
+              <label htmlFor="password">Password *</label>
+              <input
+                id="password"
+                onChange={this.onChangePassword}
+                value={password}
+                className="input-styling"
+                type="password"
+              />
+            </div>
+            <div className="label-input-container">
+              <label htmlFor="company">Company *</label>
+              <input
+                id="company"
+                onChange={this.onChangeCompany}
+                value={company}
+                className="input-styling"
+              />
+            </div>
+            <div>
+              <label id="privacyPolicy" className="terms-label">
+                <input
+                  type="checkbox"
+                  htmlFor="privacyPolicy"
+                  onChange={this.onChangeTerms}
+                  value={terms}
+                  style={{marginRight: '10px', height: '12px', width: '12px'}}
+                />
+                I agree to the{' '}
+                <span style={{color: 'blue'}}>Terms of Service</span> and{' '}
+                <span style={{color: 'blue'}}>Privacy Policy</span>
+              </label>
+            </div>
+            <button className="button-styling" type="submit">
+              Create your free account
+            </button>
+          </form>
+          {incompleteDetails && (
+            <p className="error-styles">Please Enter All * Details</p>
+          )}
         </div>
       </div>
     )
