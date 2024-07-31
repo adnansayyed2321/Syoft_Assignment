@@ -1,10 +1,11 @@
 import {Redirect, Route} from 'react-router-dom'
-import Cookie from 'js-cookie'
+import Cookies from 'js-cookie'
 
 const ProtectedRoute = props => {
-  const login = Cookie.get('login')
-  console.log(login)
-  if (!login) {
+  const userDetails = Cookies.get('userDetails')
+  const isLoggedIn = Cookies.get('isLoggedIn')
+  console.log(isLoggedIn)
+  if (userDetails === undefined && isLoggedIn === undefined) {
     return <Redirect to="/login" />
   }
   return <Route {...props} />

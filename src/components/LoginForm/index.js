@@ -1,6 +1,7 @@
 import {Component} from 'react'
-import {Link} from 'react-router-dom'
+import {Redirect, Link} from 'react-router-dom'
 import Cookies from 'js-cookie'
+
 import './index.css'
 
 class LoginForm extends Component {
@@ -28,6 +29,7 @@ class LoginForm extends Component {
 
     if (userEmail === '' || userPassword === '') {
       this.setState({incompleteDetails: true})
+      this.setState({accountNotFound: false})
     } else {
       this.setState({incompleteDetails: false})
 
@@ -44,7 +46,7 @@ class LoginForm extends Component {
         ) {
           this.setState({errorMsg: false})
           const isLoggedIn = true
-          Cookies.set('login', isLoggedIn, {
+          Cookies.set('isLoggedIn', isLoggedIn, {
             expires: 30,
             path: '/',
           })
@@ -67,6 +69,13 @@ class LoginForm extends Component {
       accountNotFound,
     } = this.state
 
+    const userDetails = Cookies.get('userDetails')
+    const isLoggedIn = Cookies.get('isLoggedIn')
+
+    if (userDetails !== undefined && isLoggedIn !== undefined) {
+      return <Redirect to="/" />
+    }
+
     return (
       <div className="sign-up-parent-container">
         <div className="sign-up-main-container">
@@ -74,7 +83,7 @@ class LoginForm extends Component {
             <h1>Welcome to our community</h1>
           </div>
           <div className="registration-main-container">
-            <h1>Sign up</h1>
+            <h1>Sign In</h1>
             <p>
               First time dont have an account ?{' '}
               <Link to="/signup">Sign up</Link>

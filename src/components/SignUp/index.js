@@ -1,6 +1,5 @@
 import {Component} from 'react'
-
-import {Link} from 'react-router-dom'
+import {Redirect, Link} from 'react-router-dom'
 import Cookies from 'js-cookie'
 import './index.css'
 
@@ -74,6 +73,12 @@ class SignUp extends Component {
       terms,
       incompleteDetails,
     } = this.state
+
+    const userDetails = Cookies.get('userDetails')
+
+    if (userDetails !== undefined) {
+      return <Redirect to="/" />
+    }
 
     return (
       <div className="sign-up-parent-container">
